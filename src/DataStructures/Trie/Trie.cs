@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CsharpAlgorithmsAndDataStructures.DataStructures.Trie
+namespace CsharpAlgorithmsAndDataStructures.DataStructures
 {
     public class Trie
     {

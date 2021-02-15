@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Diagnostics.CodeAnalysis;
 
-namespace CsharpAlgorithmsAndDataStructures.DataStructures.Trie
+namespace CsharpAlgorithmsAndDataStructures.DataStructures
 {
     internal class TrieNode
     {
