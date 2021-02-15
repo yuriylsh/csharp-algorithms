@@ -3,7 +3,7 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace CsharpAlgorithmsAndDataStructures.DataStructures.Trie
 {
-    public class TrieNode
+    internal class TrieNode
     {
         private readonly char _character;
         private readonly Dictionary<char, TrieNode> _children = new();
@@ -34,13 +34,12 @@ namespace CsharpAlgorithmsAndDataStructures.DataStructures.Trie
             return childNode;
         }
 
-        public TrieNode RemoveChild(char character)
+        public void RemoveChild(char character)
         {
             if (_children.TryGetValue(character, out var child) && IsIncompleteWithNoChildren(child))
             {
                 _children.Remove(character);
             }
-            return this;
 
             static bool IsIncompleteWithNoChildren(TrieNode node)
                 => !node.IsCompleteWord && !node.HasChildren;

@@ -19,7 +19,6 @@ namespace CsharpAlgorithmsAndDataStructures.DataStructures.Trie
             currentNode.IsCompleteWord = true;
             return this;
         }
-        
 
         public Trie DeleteWord(string word) {
             void DepthFirstDelete(TrieNode currentNode, int charIndex = 0){
@@ -59,7 +58,7 @@ namespace CsharpAlgorithmsAndDataStructures.DataStructures.Trie
 
         public bool DoesWordExist(string word) => GetLastCharacterNode(word)?.IsCompleteWord ?? false;
 
-        public TrieNode? GetLastCharacterNode(string word) 
+        private TrieNode? GetLastCharacterNode(string word) 
         {
             var currentNode = _head;
             return word.All(character => currentNode.TryGetChild(character, out currentNode))
